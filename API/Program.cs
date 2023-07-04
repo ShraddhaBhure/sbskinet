@@ -36,7 +36,7 @@ opt.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 var app = builder.Build();
 
@@ -47,7 +47,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-
+app.UseStaticFiles();
 app.UseAuthorization();
 
 app.MapControllers();

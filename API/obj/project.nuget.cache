@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "wwCWa5JCgRFeNUVFbOuXlq8unJZ03ULGyDryAU10fkSr+3qgumbFeeL/c4GwbMyaln53v4lLrFR+13AzxG+fbQ==",
+  "dgSpecHash": "chZkAoxvy2hVhTmDjwcjxrxcYiOvvoqzSzcMjYsyq2ZQ0CMAmi9Hc2jUyD/RcrO7wIy2TxaizMZ8fxzSd2t0jA==",
   "success": true,
   "projectFilePath": "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\API\\API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Shraddha\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\Shraddha\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\Shraddha\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Shraddha\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.7\\microsoft.aspnetcore.openapi.7.0.7.nupkg.sha512",
-    "C:\\Users\\Shraddha\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\Shraddha\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Shraddha\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\Shraddha\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\Shraddha\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.11\\microsoft.data.sqlite.core.6.0.11.nupkg.sha512",
