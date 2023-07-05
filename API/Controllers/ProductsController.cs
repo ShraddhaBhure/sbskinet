@@ -5,16 +5,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore; // Add this using directive
-using Core.Interfaces; 
+using Core.Interfaces;
 using Core.Specifications;
 using API.Dtos;
 using AutoMapper;
+using API.Errors;
 
 namespace API.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class ProductsController : ControllerBase
+
+    public class ProductsController :BaseApiController
     {
         private readonly StoreContext _context;
         private readonly  IProductRepository _repo;
@@ -46,23 +46,16 @@ namespace API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<ProductToReturnDto>> GetProduct(int id) 
+        [ProducesResponseType(StatusCodes.Status200OK)]
+     [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]
+             public async Task<ActionResult<ProductToReturnDto>> GetProduct(int id) 
         {
            var spec = new ProductsWithTypesAndBrandsSpecification(id); 
 
            var product = await _productsRepo.GetEntityWithSpec(spec);
-
+             if(product == null) return NotFound(new ApiResponse(404));
            return _mapper.Map<Products,ProductToReturnDto>(product);
-          //  return new ProductToReturnDto
-         //   {
-           //   Id = product.Id,
-           //   Name = product.Name,
-           //   Description = product.Description,
-           //   PictureUrl = product.PictureUrl,
-            //  Price = product.Price,
-            //  ProductBrand  = product.ProductBrand.Name,
-            //  ProductType = product.ProductType.Name
-        //   };
+
         }
 
 
