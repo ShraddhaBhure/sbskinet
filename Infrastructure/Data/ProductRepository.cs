@@ -32,18 +32,16 @@ namespace Infrastructure.Data
 
       public async Task<IReadOnlyList<Products>> GetProductAsync()
        {
-        
-        
+
       //  var typeId=1;
 
        // var products=_context.Products.where(x=>x.ProductTypeId == typeId).Include(x=>x.ProsuctType).ToListAsync();
-        
+
         return await _context.Products
             .Include(p => p.ProductType)
             .Include(p => p.ProductBrand)
             .ToListAsync();
        }
-///     
 
       public async Task<IReadOnlyList<ProductBrand>> GetProductBrandAsync()
        {

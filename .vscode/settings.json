@@ -1,6 +1,7 @@
 {
     "msbuildProjectTools.nuget.includePreRelease": false,
     "cSpell.words": [
-        "Dtos"
+        "Dtos",
+        "Entityframework"
     ]
 }
