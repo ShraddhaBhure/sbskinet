@@ -1,11 +1,12 @@
 # About sbskinet Application
 Project for .Net FullStack Development.
  Architecture built with a repository pattern, Generic repository pattern using Entity framework core & SQL Server Database. 
- This project was generated with C# Web API for the backend and AngularCLI for frontend, Further Details are
-    Angular CLI: 16.1.4
-    Node: 18.16.1      
-    Package Manager: npm 9.6.3
-    OS: win32 x64
+ This project was generated with C# Web API for the backend and AngularCLI for frontend, <br/>
+ Further Details are   <br/>
+    Angular CLI: 16.1.4 <br/>
+    Node: 18.16.1       <br/>
+    Package Manager: npm 9.6.3  <br/>
+    OS: win32 x64  <br/>
 NET Web API tested on Postman
 
 # Development server
