@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Core\\Core.csproj": {}
+    "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Core\\Core.csproj": {}
   },
   "projects": {
-    "d:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Core\\Core.csproj": {
+    "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Core\\Core.csproj",
+        "projectUniqueName": "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "d:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Core\\Core.csproj",
+        "projectPath": "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\Shraddha\\.nuget\\packages\\",
-        "outputPath": "d:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Core\\obj\\",
+        "outputPath": "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

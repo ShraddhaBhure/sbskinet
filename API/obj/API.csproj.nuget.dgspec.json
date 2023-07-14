@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\API\\API.csproj": {}
+    "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\API\\API.csproj": {}
   },
   "projects": {
-    "d:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\API\\API.csproj": {
+    "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\API\\API.csproj",
+        "projectUniqueName": "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "d:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\API\\API.csproj",
+        "projectPath": "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\API\\API.csproj",
         "packagesPath": "C:\\Users\\Shraddha\\.nuget\\packages\\",
-        "outputPath": "d:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\API\\obj\\",
+        "outputPath": "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -34,8 +34,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "d:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "d:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Infrastructure\\Infrastructure.csproj"
+              "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -104,14 +104,14 @@
         }
       }
     },
-    "d:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Core\\Core.csproj": {
+    "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Core\\Core.csproj",
+        "projectUniqueName": "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "d:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Core\\Core.csproj",
+        "projectPath": "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\Shraddha\\.nuget\\packages\\",
-        "outputPath": "d:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Core\\obj\\",
+        "outputPath": "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -164,14 +164,14 @@
         }
       }
     },
-    "d:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Infrastructure\\Infrastructure.csproj": {
+    "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "d:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Shraddha\\.nuget\\packages\\",
-        "outputPath": "d:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Infrastructure\\obj\\",
+        "outputPath": "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -193,8 +193,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "d:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Core\\Core.csproj": {
-                "projectPath": "d:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Core\\Core.csproj"
+              "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Core\\Core.csproj": {
+                "projectPath": "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Core\\Core.csproj"
               }
             }
           }

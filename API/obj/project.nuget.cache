@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uletVUzuQAtfi8c5IjAItW+iv5oDLp22vXGBhd3Op4rwelbBK39qidAOmFrgAuL+k7b1QZTjsqFbgmar6lsy9A==",
+  "dgSpecHash": "chZkAoxvy2hVhTmDjwcjxrxcYiOvvoqzSzcMjYsyq2ZQ0CMAmi9Hc2jUyD/RcrO7wIy2TxaizMZ8fxzSd2t0jA==",
   "success": true,
-  "projectFilePath": "d:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\API\\API.csproj",
+  "projectFilePath": "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Shraddha\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Shraddha\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
