@@ -3048,11 +3048,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\API\\API.csproj",
+      "projectUniqueName": "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\api\\API.csproj",
       "projectName": "API",
-      "projectPath": "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\API\\API.csproj",
+      "projectPath": "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\api\\API.csproj",
       "packagesPath": "C:\\Users\\Shraddha\\.nuget\\packages\\",
-      "outputPath": "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\API\\obj\\",
+      "outputPath": "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

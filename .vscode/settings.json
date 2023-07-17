@@ -1,7 +1,10 @@
 {
     "msbuildProjectTools.nuget.includePreRelease": false,
     "cSpell.words": [
+        "badrequest",
         "Dtos",
-        "Entityframework"
+        "Entityframework",
+        "fortytwo",
+        "servererror"
     ]
 }
