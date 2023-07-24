@@ -35,7 +35,7 @@ namespace Infrastructure.Data
 
       //  var typeId=1;
 
-       // var products=_context.Products.where(x=>x.ProductTypeId == typeId).Include(x=>x.ProsuctType).ToListAsync();
+       // var products=_context.Products.where(x=>x.ProductTypeId == typeId).Include(x=>x.ProductType).ToListAsync();
 
         return await _context.Products
             .Include(p => p.ProductType)

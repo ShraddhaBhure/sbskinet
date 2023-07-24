@@ -2,6 +2,7 @@
     "msbuildProjectTools.nuget.includePreRelease": false,
     "cSpell.words": [
         "badrequest",
+        "bootswatch",
         "Dtos",
         "Entityframework",
         "fortytwo",
