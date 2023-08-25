@@ -1,14 +1,26 @@
-# About sbskinet Application
-Project for .Net FullStack Development.
-Architecture built with a repository pattern, Generic repository pattern using Entity framework core & SQL Server Database. 
-This project was generated with C# Web API for the backend and AngularCLI for frontend, <br/>
- Further Details are   <br/>
-    Angular CLI: 16.1.4 <br/>
-    Node: 18.16.1       <br/>
-    Package Manager: npm 9.6.3  <br/>
-    OS: win32 x64  <br/>
-.NET Web API tested on Postman
+# E-Commerce Application - .NET FullStack Development Project
+## Project Overview
 
+This project is an E-Commerce application built using the .NET FullStack Development approach. It utilizes the repository pattern, with a generic repository pattern implemented using Entity Framework Core and a SQL Server database. The backend is powered by a C# Web API, providing a range of features including pagination, sorting, and filtering based on attributes like price, product type, and color. The frontend is developed using Angular CLI and styled using Bootstrap CSS and JavaScript.and .NET core Web API's are tested on Postman, and Swagger
+
+## Features
+
+- **Repository Pattern**: The project architecture follows the repository pattern for effective data management.
+- **Entity Framework Core**: The database interaction is implemented using Entity Framework Core, ensuring efficient data handling.
+- **SQL Server Database**: The application uses a SQL Server database to store and manage E-Commerce data.
+- **C# Web API**: The backend is developed using C# Web API, providing endpoints for various E-Commerce functionalities.
+- **Angular CLI**: The frontend is built using Angular CLI, delivering a responsive and interactive user interface.
+- **Bootstrap**: The application's styling is done using Bootstrap CSS and JavaScript for a modern and user-friendly design.
+- **Postman**:Web API testing, GET, POST, PUT, DELETE, GET(by id).
+ 
+## Prerequisites
+
+Before you begin, ensure you have the following software and versions installed:
+- Angular CLI: 16.1.4
+- Node: 18.16.1
+- Package Manager: npm 9.6.3
+- Operating System: Windows (win32 x64)
+  
 # Development server
 Run ng serve for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
 
