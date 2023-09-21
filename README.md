@@ -3,6 +3,9 @@
 
 This project is an E-Commerce application built using the .NET FullStack Development approach. It utilizes the repository pattern, with a generic repository pattern implemented using Entity Framework Core and a SQL Server database. The backend is powered by a C# Web API, providing a range of features including pagination, sorting, and filtering based on attributes like price, product type, and color. The frontend is developed using Angular CLI and styled using Bootstrap CSS and JavaScript.and .NET core Web API's are tested on Postman, and Swagger
 
+
+![sbBlog.API](ecom-api's.PNG)
+
 ## Features
 
 - **Repository Pattern**: The project architecture follows the repository pattern for effective data management.
