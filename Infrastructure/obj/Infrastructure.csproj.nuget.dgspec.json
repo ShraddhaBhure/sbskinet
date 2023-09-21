@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Infrastructure\\Infrastructure.csproj": {}
+    "D:\\shraddha\\Aanglar Project\\skinetapp\\sbskinet\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Core\\Core.csproj": {
+    "D:\\shraddha\\Aanglar Project\\skinetapp\\sbskinet\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Core\\Core.csproj",
+        "projectUniqueName": "D:\\shraddha\\Aanglar Project\\skinetapp\\sbskinet\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Core\\Core.csproj",
+        "projectPath": "D:\\shraddha\\Aanglar Project\\skinetapp\\sbskinet\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\Shraddha\\.nuget\\packages\\",
-        "outputPath": "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Core\\obj\\",
+        "outputPath": "D:\\shraddha\\Aanglar Project\\skinetapp\\sbskinet\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -26,8 +26,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://myget.org/f/crystalreports-release/api/v3/index.json": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
@@ -60,18 +60,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Infrastructure\\Infrastructure.csproj": {
+    "D:\\shraddha\\Aanglar Project\\skinetapp\\sbskinet\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "D:\\shraddha\\Aanglar Project\\skinetapp\\sbskinet\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "D:\\shraddha\\Aanglar Project\\skinetapp\\sbskinet\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Shraddha\\.nuget\\packages\\",
-        "outputPath": "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Infrastructure\\obj\\",
+        "outputPath": "D:\\shraddha\\Aanglar Project\\skinetapp\\sbskinet\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -86,15 +86,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://myget.org/f/crystalreports-release/api/v3/index.json": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Core\\Core.csproj": {
-                "projectPath": "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Core\\Core.csproj"
+              "D:\\shraddha\\Aanglar Project\\skinetapp\\sbskinet\\Core\\Core.csproj": {
+                "projectPath": "D:\\shraddha\\Aanglar Project\\skinetapp\\sbskinet\\Core\\Core.csproj"
               }
             }
           }
@@ -144,7 +144,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     }

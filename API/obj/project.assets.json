@@ -3048,11 +3048,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\API\\API.csproj",
+      "projectUniqueName": "D:\\shraddha\\Aanglar Project\\skinetapp\\sbskinet\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\API\\API.csproj",
+      "projectPath": "D:\\shraddha\\Aanglar Project\\skinetapp\\sbskinet\\API\\API.csproj",
       "packagesPath": "C:\\Users\\Shraddha\\.nuget\\packages\\",
-      "outputPath": "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\API\\obj\\",
+      "outputPath": "D:\\shraddha\\Aanglar Project\\skinetapp\\sbskinet\\API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3067,16 +3067,16 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://myget.org/f/crystalreports-release/api/v3/index.json": {}
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "D:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Infrastructure\\Infrastructure.csproj"
+            "D:\\shraddha\\Aanglar Project\\skinetapp\\sbskinet\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "D:\\shraddha\\Aanglar Project\\skinetapp\\sbskinet\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }
@@ -3141,7 +3141,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
       }
     }
   }

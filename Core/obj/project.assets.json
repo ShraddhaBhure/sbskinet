@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Core\\Core.csproj",
+      "projectUniqueName": "D:\\shraddha\\Aanglar Project\\skinetapp\\sbskinet\\Core\\Core.csproj",
       "projectName": "Core",
-      "projectPath": "d:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Core\\Core.csproj",
+      "projectPath": "D:\\shraddha\\Aanglar Project\\skinetapp\\sbskinet\\Core\\Core.csproj",
       "packagesPath": "C:\\Users\\Shraddha\\.nuget\\packages\\",
-      "outputPath": "d:\\shraddha\\Aanglar Project\\AngularVScode\\skinet\\Core\\obj\\",
+      "outputPath": "D:\\shraddha\\Aanglar Project\\skinetapp\\sbskinet\\Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://myget.org/f/crystalreports-release/api/v3/index.json": {}
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
@@ -67,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
       }
     }
   }
