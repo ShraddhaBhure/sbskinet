@@ -15,7 +15,7 @@ namespace API.Extensions
           services.AddEndpointsApiExplorer();
           services.AddSwaggerGen();
          services.AddDbContext<StoreContext>(opt => opt.UseSqlite(config.GetConnectionString("DefaultConnection")));
-
+          services.AddScoped<IBasketRepository, BasketRepository>();
           services.AddScoped<IProductRepository, ProductRepository>();
           services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
           services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());

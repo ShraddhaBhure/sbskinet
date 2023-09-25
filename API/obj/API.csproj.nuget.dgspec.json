@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\shraddha\\Aanglar Project\\skinetapp\\sbskinet\\api\\API.csproj": {}
+    "D:\\shraddha\\Aanglar Project\\skinetapp\\sbskinet\\API\\API.csproj": {}
   },
   "projects": {
-    "D:\\shraddha\\Aanglar Project\\skinetapp\\sbskinet\\api\\API.csproj": {
+    "D:\\shraddha\\Aanglar Project\\skinetapp\\sbskinet\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\shraddha\\Aanglar Project\\skinetapp\\sbskinet\\api\\API.csproj",
+        "projectUniqueName": "D:\\shraddha\\Aanglar Project\\skinetapp\\sbskinet\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "D:\\shraddha\\Aanglar Project\\skinetapp\\sbskinet\\api\\API.csproj",
+        "projectPath": "D:\\shraddha\\Aanglar Project\\skinetapp\\sbskinet\\API\\API.csproj",
         "packagesPath": "C:\\Users\\Shraddha\\.nuget\\packages\\",
-        "outputPath": "D:\\shraddha\\Aanglar Project\\skinetapp\\sbskinet\\api\\obj\\",
+        "outputPath": "D:\\shraddha\\Aanglar Project\\skinetapp\\sbskinet\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
