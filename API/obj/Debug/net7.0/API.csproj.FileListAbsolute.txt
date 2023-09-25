@@ -186,3 +186,5 @@ D:\shraddha\Aanglar Project\skinetapp\sbskinet\API\obj\Debug\net7.0\refint\API.d
 D:\shraddha\Aanglar Project\skinetapp\sbskinet\API\obj\Debug\net7.0\API.pdb
 D:\shraddha\Aanglar Project\skinetapp\sbskinet\API\obj\Debug\net7.0\API.genruntimeconfig.cache
 D:\shraddha\Aanglar Project\skinetapp\sbskinet\API\obj\Debug\net7.0\ref\API.dll
+D:\shraddha\Aanglar Project\skinetapp\sbskinet\API\bin\Debug\net7.0\Pipelines.Sockets.Unofficial.dll
+D:\shraddha\Aanglar Project\skinetapp\sbskinet\API\bin\Debug\net7.0\StackExchange.Redis.dll

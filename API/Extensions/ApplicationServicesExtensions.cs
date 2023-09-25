@@ -3,6 +3,7 @@ using Core.Interfaces;
 using Infrastructure.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using StackExchange.Redis;
 
 namespace API.Extensions
 {
@@ -14,7 +15,11 @@ namespace API.Extensions
 
           services.AddEndpointsApiExplorer();
           services.AddSwaggerGen();
+
          services.AddDbContext<StoreContext>(opt => opt.UseSqlite(config.GetConnectionString("DefaultConnection")));
+         //-------------added by myself--------
+         services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect("127.0.0.1:6379")); //////----added by myself---
+         
           services.AddScoped<IBasketRepository, BasketRepository>();
           services.AddScoped<IProductRepository, ProductRepository>();
           services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
