@@ -1,0 +1,45 @@
+<div class="container"> 
+    <div *ngIf="(basketService.basketSources$ | async) === null">
+        <p> There are no items in your basket</p>
+    </div>
+    <ng-container *ngIf="(basketService.basketSources$ | async) as basket">
+        <div class="container"> 
+            <div class="row">
+                <div class="table-responsive">
+                   <table class="table">
+                    <thead class="bg-light text-uppercase">
+                        <tr>
+                             <th><div class="py-2">Product</div></th>
+                             <th><div class="py-2">Price</div></th>
+                             <th><div class="py-2">Quantity</div></th>
+                             <th><div class="py-2">Total</div></th>
+                             <th><div class="py-2">Remove</div></th>  
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr *ngFor="let item of basket.items">
+
+                            <th>
+                                <div class="p-2 d-inline-block">  
+                                    <img src="{{item.pictureUrl}}" alt="{{item.productName}}"
+                                     class="img-fluid" style="max-height:50px;">
+                                     <div class="ms-3 d-inline-block align-middle">  
+                                       <h5 class="mb-0">
+                                        <a class="text-dark text-decoration-none">
+                                            {{item.productName}}
+                                        </a>
+                                       </h5>
+                                       <span class="text-muted fst-italic"> 
+                                        Type:{{item.type}}
+                                       </span>
+                                     </div>
+                                </div>
+                            </th>
+                        </tr>
+                     </tbody>
+                   </table>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</div>
