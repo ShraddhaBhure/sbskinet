@@ -17,7 +17,7 @@ namespace API.Controllers
         private readonly StoreContext _context;
         public BuggyController(StoreContext context)
         {
-        _context=context;
+                 _context = context;
         }
 
         [HttpGet("notfound")]
