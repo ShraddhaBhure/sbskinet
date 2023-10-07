@@ -1,6 +1,7 @@
 using API.Dtos;
 using API.Errors;
 using Core.Entities.Identity;
+using Core.Interfaces;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,12 +13,12 @@ namespace API.Controllers
     {
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
-
-        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser>signInManager)
+        private readonly ITokenService _tokenService; 
+        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser>signInManager, ITokenService tokenService)
         {
-            _userManager=userManager;
-            _signInManager=signInManager;
-          
+            _userManager = userManager;
+            _signInManager = signInManager;
+          _tokenService = tokenService;
         } 
 
         [HttpPost("login")]
@@ -32,10 +33,33 @@ namespace API.Controllers
             return new UserDto 
             {
                 Email= user.Email,
-                Token = "this will be token",
+                Token = _tokenService.CreateToken(user),
                 DisplayName=user.DisplayName
             };
 
+        }
+
+
+         [HttpPost("register")]
+        public async Task<ActionResult<UserDto>> Register(RegisterDto registerDto)
+        {
+          var user = new AppUser
+          {
+            Email= registerDto.Email,
+            DisplayName=registerDto.DisplayName,
+            UserName= registerDto.Email
+          };
+            var result = await _userManager.CreateAsync(user, registerDto.Password);
+               if (!result.Succeeded) return BadRequest(new ApiResponse(400));
+           
+            return new UserDto 
+            {
+                DisplayName= user.DisplayName,
+                Token =  _tokenService.CreateToken(user),
+                Email= user.Email
+             
+              
+            };
         }
     }
 }

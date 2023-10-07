@@ -1,0 +1,280 @@
+
+PS D:\shraddha\Aanglar Project\skinetapp\sbskinet>  
+D:\shraddha\Aanglar Project\skinetapp\sbskinet
+
+ npm install -g npm --force
+
+docker-compose up --detach     
+
+get skinet folder inside docker--ie container
+
+open docker
+redis -commander 
+
+----follow link on new tab google---
+http://127.0.0.1:8081/
+geting sign in ------
+username is root
+password is secret
+
+-----------
+on windows powershell-run as administrator---------
+1.) https://chocolatey.org/install 
+
+install cholatey from this
+With PowerShell, you must ensure Get-ExecutionPolicy is not Restricted. We suggest using Bypass to bypass the policy to get things installed or AllSigned for quite a bit more security.
+
+Run Get-ExecutionPolicy. If it returns Restricted, then run Set-ExecutionPolicy AllSigned or Set-ExecutionPolicy Bypass -Scope Process.
+
+
+--------install redis-----------
+2.) https://community.chocolatey.org/packages/redis-64/3.0.501
+choco install redis-64 --version=3.0.501
+------------------------------------------------------
+open command prompt
+
+
+C:\Users\Shraddha>redis-server
+[9004] 25 Sep 14:28:20.957 # Warning: no config file specified, using the default config. In order to specify a config file use C:\ProgramData\chocolatey\lib\redis-64\redis-server.exe /path/to/redis.conf
+                _._
+           _.-``__ ''-._
+      _.-``    `.  `_.  ''-._           Redis 3.0.501 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._
+ (    '      ,       .-`  | `,    )     Running in standalone mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6379
+ |    `-._   `._    /     _.-'    |     PID: 9004
+  `-._    `-._  `-./  _.-'    _.-'
+ |`-._`-._    `-.__.-'    _.-'_.-'|
+ |    `-._`-._        _.-'_.-'    |           http://redis.io
+  `-._    `-._`-.__.-'_.-'    _.-'
+ |`-._`-._    `-.__.-'    _.-'_.-'|
+ |    `-._`-._        _.-'_.-'    |
+  `-._    `-._`-.__.-'_.-'    _.-'
+      `-._    `-.__.-'    _.-'
+          `-._        _.-'
+              `-.__.-'
+
+[9004] 25 Sep 14:28:20.957 # Server started, Redis version 3.0.501
+[9004] 25 Sep 14:28:20.957 * The server is now ready to accept connections on port 6379
+-----------------------------------
+C:\Users\Shraddha>redis-cli
+127.0.0.1:6379> ping
+PONG
+127.0.0.1:6379>
+pong means redis is functioning correctly
+redis cli
+--------------------------
+----follow link on new tab google---
+http://127.0.0.1:8081/
+geting sign in ------
+username is root
+password is secret
+
+------------how to test-------
+
+C:\Users\Shraddha>redis-cli
+127.0.0.1:6379> set animal kangaroo
+OK
+127.0.0.1:6379> get animal
+"kangaroo"
+127.0.0.1:6379>
+
+
+----------------------
+------------------------
+PS D:\shraddha\Aanglar Project\skinetapp\sbskinet> docker-compose up -d
+[+] Running 2/0
+ ✔ Container sbskinet-redis-1            Running                                                                                           0.0s 
+ ✔ Container sbskinet-redis-commander-1  Running                                                                                           0.0s 
+PS D:\shraddha\Aanglar Project\skinetapp\sbskinet> 
+
+--------
+postman test---  Basket api 
+test ---Update Basket--- 
+then this will  create database inside redis named-  basket1 
+test ---Delete Basket---
+then this will  delete database inside redis named-  basket1 
+-----------------------------------
+///////////------End of Section 13--------
+
+
+
+PS D:\shraddha\Aanglar Project\skinetapp\sbskinet\client> ng g m basket
+
+ ng g m basket/basket-routing --flat
+ng g c basket/basket --flat --skip-tests
+ng g s basket/basket --skip-tests
+
+----------
+postman test  basket api 
+test ---Update Basket-- get json data 
+convert it into TypeScript  using online converter
+https://transform.tools/json-to-typescript
+like this----
+JSON--
+ {
+    "id": "basket1",
+    "items": [
+        {
+            "id": 4,
+            "productName": ".NET Black & White Mug",
+            "price": 8.22,
+            "quantity": 32,
+            "pictureUrl": "https://localhost:5001/images/products/2.png",
+            "brand": ".NET",
+            "type": "USB Memory Stick"
+        }
+    ]
+}
+
+TypeScript---
+
+export interface Root {
+  id: string
+  items: Item[]
+}
+
+export interface Item {
+  id: number
+  productName: string
+  price: number
+  quantity: number
+  pictureUrl: string
+  brand: string
+  type: string
+}
+ create class for basket
+add iton navbar, updates navbar.ts files, routing files
+---------------
+client=>
+npm install cuid --force
+
+at angular.json file---
+architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "allowedCommonJsDependencies": ["cuid"],
+-------
+
+
+-----------------------------------------------------------------------
+-----------if this error occured ----------------------
+GET https://localhost:5001/api/basket?id=basket1
+Error: connect ECONNREFUSED 127.0.0.1:5001
+
+Check Redis Server Status: Verify that your Redis server is up and running.
+on command Prompt
+C:\Users\Shraddha>redis-server
+------
+C:\Users\Shraddha>redis-cli
+127.0.0.1:6379> ping
+PONG
+127.0.0.1:6379>
+---------------------------------------------
+
+ ng g c shared/order-totals --skip-tests
+
+
+ng g m  checkout
+ng g m  checkout/checkout-routing --flat
+ng g s checkout/checkout --skip-tests
+ng g c checkout/checkout --flat --skip-tests
+------
+-----section 15---->
+In  Core Project
+add Packeges
+Microsoft.AspNetCore.Identity.EntityFrameworkCore 
+Microsoft.AspNetCore.Identity 
+-----------
+in Infrastracture Project
+add Packeges
+
+Microsoft.IdentityModel.Tokens 
+System.IdentityModel.Tokens.Jwt
+
+-----------
+in API Project
+add Packeges
+Microsoft.AspNetCore.Authentication.JwtBearer
+-----------
+In Project Core -add new folder Identity - inside Entities Folder
+here add 2 class file
+Address
+AppUser
+---
+
+in Infrastracture Project
+add new folder Identity - inside Entities Folder
+add class
+AppIdentityDbContext
+
+------------
+in API Project
+inside Extensions Folder
+add class IdentityServiceExtensions
+
+
+----------------
+in appsettings.developements.json
+add new connnnetionstrings
+"IdentityConnection":"Data Source=identity.db"
+for this
+add service inside program.cs 
+-------------
+---------------------------------------------------
+add new Migrations
+PS D:\shraddha\Aanglar Project\skinetapp\sbskinet>
+dotnet ef migrations add IdentityInitial --project Infrastructure --startup-project API --context AppIdentityDbContext --output-dir Identity/Migrations
+Build started...
+Build succeeded.
+Done. To undo this action, use 'ef migrations remove'
+
+----SeedData -Identity----
+
+add like this random data 
+--
+  DisplayName ="sb",
+                Email = "sb@test.com",
+                UserName = "sb@test.com",
+                Address = new Address
+                { 
+                    FirstName ="shraddha",
+                    LastName ="bhure",
+                    Street="10 The Street",
+                    City="Nagpur",
+                    State="MH",
+                    ZipCode="440033"
+                }
+
+              };
+              await userManager.CreateAsync(user, "Pa$$w0rd")
+
+
+
+--------------
+
+{
+	"email": "bob@test.com",
+	"password": "Pa$$w0rd"
+}
+--------------------------------------
+in project API
+in folder add Extensions
+IdentityServiceExtensions add AddIdentityServices
+add in program.cs
+-------------------------
+Add New Controller  
+AccountController
+inside Core.Interfaces add 
+ITokenService.cs
+--------
+inside Infrastructure.Services folder
+TokenService.cs
+------
+https://randomkeygen.com/
+https://jwt.io/
+https://keygen.io/#fakeLink
+------
+
+Bearer_
