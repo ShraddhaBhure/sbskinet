@@ -24,6 +24,7 @@ namespace Infrastructure.Identity
                         State = "MH",
                         ZipCode = "440033"
                     }
+                    
                 };
 
                 await userManager.CreateAsync(user1, "Pa$$w0rd"); // Uppercase, lowercase, alphanumeric password

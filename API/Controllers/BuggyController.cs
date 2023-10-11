@@ -4,7 +4,7 @@ using Core.Entities;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore; // Add this using directive
+using Microsoft.EntityFrameworkCore; 
 using Core.Interfaces; 
 using Core.Specifications;
 using API.Dtos;
@@ -23,7 +23,7 @@ namespace API.Controllers
 
 
         [HttpGet("testAuth")]
-        [Authorize]
+        //[Authorize]
         public ActionResult<string> GetSecretText()
         {
          return "Secret Stuff";
@@ -32,13 +32,14 @@ namespace API.Controllers
         [HttpGet("notfound")]
         public ActionResult GetNotFoundRequest()
         {
-             var thing =_context.Products.Find(42);
+             var thing = _context.Products.Find(42);
 
             if(thing == null)
              {
                 return NotFound(new ApiResponse(404));
              }
-            return Ok();
+           // return Ok();
+           return Ok(thing);
         }
 
         [HttpGet("servererror")]
