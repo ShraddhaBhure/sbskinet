@@ -14,9 +14,6 @@ namespace API.Extensions
         IConfiguration config )
         {
 
-          services.AddEndpointsApiExplorer();
-          services.AddSwaggerGen();
-
          services.AddDbContext<StoreContext>(opt => opt.UseSqlite(config.GetConnectionString("DefaultConnection")));
          //-------------added by myself--------
          services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect("127.0.0.1:6379")); //////----added by myself---
