@@ -9,7 +9,7 @@ import { SharedModule } from '../shared/shared.module';
     BasketComponent
   ],
   imports: [
-    CommonModule, 
+    CommonModule,
     BasketRoutingModule,
     SharedModule
   ]

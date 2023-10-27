@@ -1,8 +1,9 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, map } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Basket, BasketItem, BasketTotals } from '../shared/models/basket';
-import { HttpClient } from '@angular/common/http';
+import { DeliveryMethod } from '../shared/models/deliveryMethod';
 import { Product } from '../shared/models/product';
 
 @Injectable({
@@ -11,50 +12,59 @@ import { Product } from '../shared/models/product';
 export class BasketService {
   baseUrl = environment.apiUrl;
   private basketSource = new BehaviorSubject<Basket | null>(null);
-  basketSource$: Observable<Basket | null> = this.basketSource.asObservable();
+  basketSource$ = this.basketSource.asObservable();
   private basketTotalSource = new BehaviorSubject<BasketTotals | null>(null);
-  basketTotalSource$: Observable<BasketTotals | null> = this.basketTotalSource.asObservable();
+  basketTotalSource$ = this.basketTotalSource.asObservable();
+  shipping = 0;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
-  getBasket(id: string): void {
-    this.http.get<Basket>(this.baseUrl + 'basket?id=' + id).subscribe({
+  setShippingPrice(deliveryMethod: DeliveryMethod) {
+    const basket = this.getCurrentBasketValue();
+   this.shipping = deliveryMethod.price;
+   this.calculateTotals();
+  }
+  createPaymentIntent() {
+    return this.http.post<Basket>(this.baseUrl + 'payments/' + this.getCurrentBasketValue()?.id, {})
+      .pipe(
+        map(basket => {
+          this.basketSource.next(basket);
+        })
+      )
+  }
+
+
+  getBasket(id: string) {
+    return this.http.get<Basket>(this.baseUrl + 'basket?id=' + id).subscribe({
       next: basket => {
         this.basketSource.next(basket);
         this.calculateTotals();
-      },
-      error: error => {
-        console.error('Error fetching basket:', error);
       }
-    });
+    })
   }
 
-  setBasket(basket: Basket): void {
-    this.http.post<Basket>(this.baseUrl + 'basket', basket).subscribe({
-      next: updatedBasket => {
-        this.basketSource.next(updatedBasket);
+  setBasket(basket: Basket) {
+    return this.http.post<Basket>(this.baseUrl + 'basket', basket).subscribe({
+      next: basket => {
+        this.basketSource.next(basket);
         this.calculateTotals();
-      },
-      error: error => {
-        console.error('Error setting basket:', error);
       }
-    });
+    })
   }
 
-  getCurrentBasketValue(): Basket | null {
+  getCurrentBasketValue() {
     return this.basketSource.value;
   }
 
-  addItemToBasket(item: Product | BasketItem, quantity = 1): void {
-    if (this.isProduct(item)) {
-      item = this.mapProductItemToBasketItem(item);
-    }
+  addItemToBasket(item: Product | BasketItem, quantity = 1) {
+    if (this.isProduct(item)) item = this.mapProductItemToBasketItem(item);
+    console.log(item);
     const basket = this.getCurrentBasketValue() ?? this.createBasket();
     basket.items = this.addOrUpdateItem(basket.items, item, quantity);
     this.setBasket(basket);
   }
 
-  removeItemFromBasket(id: number, quantity = 1): void {
+  removeItemFromBasket(id: number, quantity = 1) {
     const basket = this.getCurrentBasketValue();
     if (!basket) return;
     const item = basket.items.find(x => x.id === id);
@@ -63,30 +73,29 @@ export class BasketService {
       if (item.quantity === 0) {
         basket.items = basket.items.filter(x => x.id !== id);
       }
-
-      if (basket.items.length > 0) {
-        this.setBasket(basket);
-      } else {
-        this.deleteBasket(basket);
-      }
+      if (basket.items.length > 0) this.setBasket(basket);
+      else this.deleteBasket(basket);
     }
   }
 
-  deleteBasket(basket: Basket){
-   return this.http.delete(this.baseUrl + 'basket?id=' + basket.id).subscribe ({
-    next: () => {
-      this.basketSource.next(null);
-      this.basketTotalSource.next(null);
-      localStorage.removeItem('basket_id');
-    }
-   })
+  deleteBasket(basket: Basket) {
+    return this.http.delete(this.baseUrl + 'basket?id=' + basket.id).subscribe({
+      next: () => {
+        this.deleteLocalBasket();
+      }
+    })
+  }
+
+  deleteLocalBasket() {
+    this.basketSource.next(null);
+    this.basketTotalSource.next(null);
+    localStorage.removeItem('basket_id');
   }
 
   private addOrUpdateItem(items: BasketItem[], itemToAdd: BasketItem, quantity: number): BasketItem[] {
     const item = items.find(x => x.id === itemToAdd.id);
-    if (item) {
-      item.quantity += quantity;
-    } else {
+    if (item) item.quantity += quantity;
+    else {
       itemToAdd.quantity = quantity;
       items.push(itemToAdd);
     }
@@ -95,7 +104,7 @@ export class BasketService {
 
   private createBasket(): Basket {
     const basket = new Basket();
-    localStorage.setItem('basket', JSON.stringify(basket));
+    localStorage.setItem('basket_id', basket.id);
     return basket;
   }
 
@@ -108,18 +117,17 @@ export class BasketService {
       pictureUrl: item.pictureUrl,
       brand: item.productBrand,
       type: item.productType
-    };
+    }
   }
 
   private calculateTotals(): void {
     const basket = this.getCurrentBasketValue();
     if (!basket) return;
-    const shipping = 0;
-    const subtotal = basket.items.reduce((a, b) => (b.price * b.quantity) + a, 0);
-    const total = subtotal + shipping;
-    this.basketTotalSource.next({ shipping, total, subtotal });
-  }
 
+    const subtotal = basket.items.reduce((a, b) => (b.price * b.quantity) + a, 0);
+    const total = subtotal + this.shipping;
+    this.basketTotalSource.next({ shipping:this.shipping, total, subtotal });
+  }
   private isProduct(item: Product | BasketItem): item is Product {
     return (item as Product).productBrand !== undefined;
   }

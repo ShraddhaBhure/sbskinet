@@ -33,7 +33,8 @@ namespace API.Controllers
 
             return Ok(order);
         }
-         [HttpGet]
+        
+        [HttpGet]
         public async Task<ActionResult<IReadOnlyList<OrderToReturnDto>>> GetOrdersForUser()
         {
             var email = User.RetrieveEmailFromPrincipal();
@@ -42,8 +43,8 @@ namespace API.Controllers
 
             return Ok(_mapper.Map<IReadOnlyList<OrderToReturnDto>>(orders));
         }
-        
-         [HttpGet("{id}")]
+
+        [HttpGet("{id}")]
         public async Task<ActionResult<OrderToReturnDto>> GetOrderByIdForUser(int id)
         {
             var email = User.RetrieveEmailFromPrincipal();
@@ -60,6 +61,5 @@ namespace API.Controllers
         {
             return Ok(await _orderService.GetDeliveryMethodsAsync());
         }
-
     }
-    }
+}

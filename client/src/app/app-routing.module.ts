@@ -13,9 +13,11 @@ const routes: Routes = [
   {path: 'server-error', component: ServerErrorComponent},
   {path: 'shop', loadChildren:() => import('./shop/shop.module').then(m => m.ShopModule)},
   { path: 'basket', loadChildren: () => import('./basket/basket.module').then(m => m.BasketModule) },
-  {path: 'checkout',
-  canActivate:[AuthGuard],
-   loadChildren:() => import('./checkout/checkout.module').then(m => m.CheckoutModule)},
+  {
+  path: 'checkout',
+  canActivate: [AuthGuard],
+  loadChildren: () => import('./checkout/checkout.module').then(m => m.CheckoutModule)
+  },
   {path: 'account', loadChildren:() => import('./account/account.module').then(m => m.AccountModule)},
   {path: '**', redirectTo: '', pathMatch: 'full'},
 ];

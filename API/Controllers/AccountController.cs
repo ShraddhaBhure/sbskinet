@@ -31,11 +31,13 @@ namespace API.Controllers
         } 
 
 
+      
         [Authorize]
         [HttpGet]
         public async Task<ActionResult<UserDto>> GetCurrentUser()
         {
             var user = await _userManager.FindByEmailFromClaimsPrincipal(User);
+
             return new UserDto
             {
                 Email = user.Email,
@@ -43,7 +45,6 @@ namespace API.Controllers
                 DisplayName = user.DisplayName
             };
         }
-
 
    
 
@@ -54,18 +55,19 @@ namespace API.Controllers
 
         }
         
-         [Authorize]
+        [Authorize]
         [HttpGet("address")]
         public async Task<ActionResult<AddressDto>> GetUserAddress()
         {
             var user = await _userManager.FindUserByClaimsPrincipleWithAddress(User);
+
             return _mapper.Map<Address, AddressDto>(user.Address);
         }
 
 
 
-        [Authorize]
-        [HttpPut("address")]
+       [Authorize]
+       [HttpPut("address")]
         public async Task<ActionResult<AddressDto>> UpdateUserAddress(AddressDto address)
         {
             var user = await _userManager.FindUserByClaimsPrincipleWithAddress(User);
