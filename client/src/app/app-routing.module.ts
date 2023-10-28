@@ -5,6 +5,7 @@ import { TestErrorComponent } from './core/test-error/test-error.component';
 import { NotFoundComponent } from './core/not-found/not-found.component';
 import { ServerErrorComponent } from './core/server-error/server-error.component';
 import { AuthGuard } from './core/guards/auth.guard';
+import { CheckoutSuccessComponent } from './checkout/checkout-success/checkout-success.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent, data:{breadcrumb:'Home'}},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'server-error', component: ServerErrorComponent},
   {path: 'shop', loadChildren:() => import('./shop/shop.module').then(m => m.ShopModule)},
   { path: 'basket', loadChildren: () => import('./basket/basket.module').then(m => m.BasketModule) },
+  { path: 'checkout/success', component: CheckoutSuccessComponent },///added by me
   {
   path: 'checkout',
   canActivate: [AuthGuard],

@@ -16,7 +16,6 @@ import { JwtInterceptor } from './core/interceptors/jwt.interceptor';
 @NgModule({
   declarations: [
     AppComponent
-  
   ],
   imports: [
     BrowserModule,
@@ -24,7 +23,8 @@ import { JwtInterceptor } from './core/interceptors/jwt.interceptor';
     BrowserAnimationsModule,
     HttpClientModule,
     CoreModule,
-    HomeModule
+    HomeModule,
+    
   ],
   providers: [
     {provide:HTTP_INTERCEPTORS , useClass: ErrorInterceptor, multi: true},

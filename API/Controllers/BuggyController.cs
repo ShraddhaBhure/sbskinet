@@ -23,7 +23,7 @@ namespace API.Controllers
 
 
         [HttpGet("testAuth")]
-        //[Authorize]
+        [Authorize]
         public ActionResult<string> GetSecretText()
         {
          return "Secret Stuff";

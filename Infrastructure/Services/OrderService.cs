@@ -64,7 +64,7 @@ namespace Infrastructure.Services
             return order;
         }
 
-        public async Task<IReadOnlyList<DeliveryMethod>> GetDeliveryMethodsAsync()
+      public async Task<IReadOnlyList<DeliveryMethod>> GetDeliveryMethodsAsync()
         {
             return await _unitOfWork.Repository<DeliveryMethod>().ListAllAsync();
         }
