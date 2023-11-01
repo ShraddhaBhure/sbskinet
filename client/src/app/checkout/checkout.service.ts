@@ -5,7 +5,6 @@ import { environment } from 'src/environments/environment';
 import { DeliveryMethod } from '../shared/models/deliveryMethod';
 import { Order, OrderToCreate } from '../shared/models/order';
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -14,10 +13,9 @@ export class CheckoutService {
 
   constructor(private http: HttpClient) { }
 
- createOrder(order: OrderToCreate){
- return this.http.post<Order>(this.baseUrl + 'orders', order);
- }
-  
+  createOrder(order: OrderToCreate) {
+    return this.http.post<Order>(this.baseUrl + 'orders', order);
+  }
 
   getDeliveryMethods() {
     return this.http.get<DeliveryMethod[]>(this.baseUrl + 'orders/deliveryMethods').pipe(

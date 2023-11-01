@@ -67,28 +67,41 @@ constructor(private basketService: BasketService,  private checkoutService: Chec
   }
 
   submittingOrder: boolean = false;
-  submitOrder(){
+  
+  async submitOrder() {
     this.loading = true;
     const basket = this.basketService.getCurrentBasketValue();
-    const createdOrder =  this.createOrder(basket);
-    if(!basket) return;
-    const orderToCreate = this.getOrderToCreate(basket);
-    if(!orderToCreate) return;
-    
-    this.checkoutService.createOrder(orderToCreate).subscribe({
-      next: (order) => {
-        this.toastr.success('Order created successfully');
-        this.basketService.deleteLocalBasket();
-        const navigationExtras: NavigationExtras = { state: createdOrder };
+    if (!basket) throw new Error('cannot get basket');
+    try {
+      const createdOrder = await this.createOrder(basket);
+      const paymentResult = await this.confirmPaymentWithStripe(basket);
+      if (paymentResult.paymentIntent) {
+        this.basketService.deleteBasket(basket);
+        const navigationExtras: NavigationExtras = {state: createdOrder};
         this.router.navigate(['checkout/success'], navigationExtras);
-      },
-      error: (error) => {
-        // Handle any errors here
-      },
-      complete: () => {
-        this.loading = false; // Set it back to false when order submission is complete.
-      },
+      } else {
+        this.toastr.error(paymentResult.error.message);
+      }
+    } catch (error: any) {
+      console.log(error);
+      this.toastr.error(error.message)
+    } finally {
+      this.loading = false;
+    }
+  }
+
+  private async confirmPaymentWithStripe(basket: Basket | null) {
+    if (!basket) throw new Error('Basket is null');
+    const result = this.stripe?.confirmCardPayment(basket.clientSecret!, {
+      payment_method: {
+        card: this.cardNumber!,
+        billing_details: {
+          name: this.checkoutForm?.get('paymentForm')?.get('nameOnCard')?.value
+        }
+      }
     });
+    if (!result) throw new Error('Problem attempting payment with stripe');
+    return result;
   }
   private async createOrder(basket: Basket | null) {
     if (!basket) throw new Error('Basket is null');
