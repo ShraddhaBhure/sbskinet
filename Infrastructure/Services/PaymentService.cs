@@ -47,7 +47,7 @@ namespace Infrastructure.Services
                 }
             } 
             
-              var service = new PaymentIntentService();
+            var service = new PaymentIntentService();
       
             PaymentIntent intent;
 
@@ -74,6 +74,34 @@ namespace Infrastructure.Services
 
             await _basketRepository.UpdateBasketAsync(basket);
 
-            return basket;  }
-    }
+            return basket; 
+       }
+    
+
+       public async Task<Order> UpdateOrderPaymentFailed(string paymentIntentId)
+        {
+            var spec = new OrderByPaymentIntentIdSpecification(paymentIntentId);
+            var order = await _unitOfWork.Repository<Order>().GetEntityWithSpec(spec);
+
+            if (order == null) return null;
+
+            order.Status = OrderStatus.PaymentFailed;
+            await _unitOfWork.Complete();//to save our changes
+
+            return order;
+        }
+
+        public async Task<Order> UpdateOrderPaymentSucceeded(string paymentIntentId)
+        {
+            var spec = new OrderByPaymentIntentIdSpecification(paymentIntentId);
+            var order = await _unitOfWork.Repository<Order>().GetEntityWithSpec(spec);
+
+            if (order == null) return null;
+
+            order.Status = OrderStatus.PaymentReceived;
+            await _unitOfWork.Complete();
+
+            return order;
+        }
+}
 }

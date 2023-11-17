@@ -28,6 +28,7 @@ cardCvc?: StripeCardCvcElement;
 cardNumberComplete = false;
 cardExpiryComplete = false;
 cardCvcComplete = false;
+
 cardErrors: any;
 loading = false;
 
@@ -65,6 +66,14 @@ constructor(private basketService: BasketService,  private checkoutService: Chec
       }
     })
   }
+
+  get paymentFormComplete() {
+    return this.checkoutForm?.get('paymentForm')?.valid 
+      && this.cardNumberComplete 
+      && this.cardExpiryComplete 
+      && this.cardCvcComplete
+  }
+
 
   submittingOrder: boolean = false;
   
