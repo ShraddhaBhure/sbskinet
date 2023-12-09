@@ -5,6 +5,8 @@ This project is an E-Commerce application built using the .NET FullStack Develop
 
 
 ![sbskinet](ecom-api's.PNG)
+![Project Image](https://github.com/ShraddhaBhure/sbskinet/blob/main/projects_images/skinetbasket.png)
+
 
 ## Features
 
