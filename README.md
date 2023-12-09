@@ -3,10 +3,8 @@
 
 This project is an E-Commerce application built using the .NET FullStack Development approach. It utilizes the repository pattern, with a generic repository pattern implemented using Entity Framework Core and a SQL Server database. The backend is powered by a C# Web API, providing a range of features including pagination, sorting, and filtering based on attributes like price, product type, and color. The frontend is developed using Angular CLI and styled using Bootstrap CSS and JavaScript.and .NET core Web API's are tested on Postman, and Swagger
 
-
-![sbskinet](ecom-api's.PNG)
 ![Project Image](https://github.com/ShraddhaBhure/sbskinet/blob/main/projects_images/skinetbasket.png)
-
+![Project Image2](https://github.com/ShraddhaBhure/sbskinet/blob/main/projects_images/ecom-api's.PNG)
 
 ## Features
 
