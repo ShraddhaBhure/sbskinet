@@ -6,8 +6,6 @@ This project is an E-Commerce application built using the .NET FullStack Develop
 ![Project Image](https://github.com/ShraddhaBhure/sbskinet/blob/main/projects_images/skinetbasket.png)
 ![Project Image2](https://github.com/ShraddhaBhure/sbskinet/blob/main/projects_images/ecom-api's.PNG)
 
-
-
 ## Backend (C# Web API)
 
 The backend of the application is built using C# and the .NET framework, providing RESTful APIs to communicate with the frontend and handle core business logic.
