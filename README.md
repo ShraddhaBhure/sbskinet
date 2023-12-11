@@ -6,7 +6,55 @@ This project is an E-Commerce application built using the .NET FullStack Develop
 ![Project Image](https://github.com/ShraddhaBhure/sbskinet/blob/main/projects_images/skinetbasket.png)
 ![Project Image2](https://github.com/ShraddhaBhure/sbskinet/blob/main/projects_images/ecom-api's.PNG)
 
-## Features
+
+
+## Backend (C# Web API)
+
+The backend of the application is built using C# and the .NET framework, providing RESTful APIs to communicate with the frontend and handle core business logic.
+
+## Frontend (Angular CLI)
+
+The frontend is developed using Angular CLI, a powerful command-line interface for Angular, delivering a responsive and interactive user interface.
+
+## Authentication
+
+- **JWT Token Authentication:**
+  Utilizes JSON Web Tokens (JWT) for secure authentication, ensuring the safe transmission of information between parties.
+
+## Containerization and Caching
+
+- **Docker Containers:**
+  Docker is employed for containerization, enabling consistent application deployment across different environments.
+
+- **Redis-Server:**
+  Redis is utilized as an in-memory data store and cache to enhance the overall performance of the application.
+
+## User Management
+
+- **.NET Core Identity:**
+  Incorporates .NET Core Identity for managing user authentication, authorization, and related functionalities.
+
+## E-Commerce Features
+
+- **Payment Gateway:**
+  Implements a secure payment gateway, allowing users to make online transactions for products or services.
+
+- **Validations:**
+  Includes validation mechanisms to ensure accurate and valid user input.
+
+- **Filters:**
+  Implements filters for sorting and organizing data, enhancing the user experience during product or content browsing.
+
+## Testing and Documentation
+
+- **Testing with Postman:**
+  Utilizes Postman for comprehensive testing of API endpoints, covering various scenarios.
+
+- **Documented using Swagger:**
+  Swagger is employed to generate API documentation, providing a clear reference for developers to understand and interact with the API.
+
+
+ ## Other Features
 
 - **Repository Pattern**: The project architecture follows the repository pattern for effective data management.
 - **Entity Framework Core**: The database interaction is implemented using Entity Framework Core, ensuring efficient data handling.
@@ -15,7 +63,7 @@ This project is an E-Commerce application built using the .NET FullStack Develop
 - **Angular CLI**: The frontend is built using Angular CLI, delivering a responsive and interactive user interface.
 - **Bootstrap**: The application's styling is done using Bootstrap CSS and JavaScript for a modern and user-friendly design.
 - **Postman**:Web API testing, GET, POST, PUT, DELETE, GET(by id).
- 
+
 ## Prerequisites
 
 Before you begin, ensure you have the following software and versions installed:
