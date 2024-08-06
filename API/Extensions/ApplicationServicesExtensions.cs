@@ -15,8 +15,8 @@ namespace API.Extensions
         {
 
          services.AddDbContext<StoreContext>(opt => opt.UseSqlite(config.GetConnectionString("DefaultConnection")));
-         //-------------added by myself--------
-         services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect("127.0.0.1:6379")); //////----added by myself---
+         //-------------added newly--------
+         services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect("127.0.0.1:6379")); //////----added newly---
          
           services.AddScoped<IBasketRepository, BasketRepository>();
           services.AddScoped<IProductRepository, ProductRepository>();
